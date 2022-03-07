@@ -507,6 +507,12 @@ class AgentsGapicClient
      *                             URI to export the agent to.
      *                             The format of this URI must be `gs://<bucket-name>/<object-name>`.
      *                             If left unspecified, the serialized agent is returned inline.
+     *
+     *                             Dialogflow performs a write operation for the Cloud Storage object
+     *                             on the caller's behalf, so your request authentication must
+     *                             have write permissions for the object. For more information, see
+     *                             [Dialogflow access
+     *                             control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
      * @param array  $optionalArgs {
      *     Optional.
      *
@@ -695,6 +701,12 @@ class AgentsGapicClient
      *     @type string $agentUri
      *           The URI to a Google Cloud Storage file containing the agent to import.
      *           Note: The URI must start with "gs://".
+     *
+     *           Dialogflow performs a read operation for the Cloud Storage object
+     *           on the caller's behalf, so your request authentication must
+     *           have read permissions for the object. For more information, see
+     *           [Dialogflow access
+     *           control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
      *     @type string $agentContent
      *           Zip compressed raw byte content for agent.
      *     @type RetrySettings|array $retrySettings
@@ -795,6 +807,12 @@ class AgentsGapicClient
      *     @type string $agentUri
      *           The URI to a Google Cloud Storage file containing the agent to restore.
      *           Note: The URI must start with "gs://".
+     *
+     *           Dialogflow performs a read operation for the Cloud Storage object
+     *           on the caller's behalf, so your request authentication must
+     *           have read permissions for the object. For more information, see
+     *           [Dialogflow access
+     *           control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
      *     @type string $agentContent
      *           Zip compressed raw byte content for agent.
      *     @type RetrySettings|array $retrySettings
